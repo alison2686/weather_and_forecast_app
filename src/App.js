@@ -8,6 +8,7 @@ export default function App() {
   const [lat, setLat] = useState('')
   const [long, setLong] = useState('')
   const [weatherData, setWeatherData] = useState([])
+  const [forecast, setForecast] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,11 +22,16 @@ export default function App() {
       console.log("Longitude is:", long)
 
       if (lat !== '' && long !== '') {
-      await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
-      .then(response => response.json())
-      .then(result => {
-        setWeatherData(result)
-        console.log(result);
+        let weatherAPI = fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
+        let forecastAPI = fetch(`${process.env.REACT_APP_API_URL}/forecast/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
+     await Promise.all([weatherAPI, forecastAPI])
+      .then(values => Promise.all(values.map(value => value.json())))
+      .then(finalVals => {
+        let weatherAPIResp = finalVals[0]
+        let forecastAPIResp = finalVals[1]
+        setWeatherData(weatherAPIResp)
+        setForecast(forecastAPIResp)
+        console.log(weatherAPIResp, forecastAPIResp)
       })
       .catch(error=>console.log(error));
     }
@@ -37,7 +43,7 @@ export default function App() {
   return (
     <div className="App">
       {(typeof weatherData.main != 'undefined') ? (
-        <Weather weatherData={weatherData}/>
+        <Weather weatherData={weatherData} forecast={forecast}/>
       ): (
         <div>
           <Dimmer active>
