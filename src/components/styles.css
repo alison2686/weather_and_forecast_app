@@ -81,3 +81,11 @@
     justify-content: space-between;
 }
 
+.weather_icon{
+    display: flex;
+    float: left;
+    display: inline-flex;
+    width: auto;
+    padding-top: 0%;
+}
+
