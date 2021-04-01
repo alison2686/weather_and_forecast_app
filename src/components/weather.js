@@ -41,7 +41,7 @@ const Weather = ({weatherData}) => {
   } else if (weatherData.weather[0].main === 'Clouds') {
     weatherIcon = <FontAwesomeIcon icon={faCloud} />;
   } else {
-    weatherIcon = <FontAwesomeIcon icon={faSmog} />;
+    weatherIcon = <FontAwesomeIcon icon={faSun} />;
   }
 
 
