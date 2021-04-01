@@ -44,15 +44,6 @@ export default function App() {
 
 
 
-      // Add extra properties for the five day forecast: dt_txt, icon, min, max
-    //   if (data.dt_txt) {
-    //     mapped.dt_txt = data.dt_txt;
-    //   }
-    
-    //   return mapped;
-    // }
-
-
 
     return (
       <div className="App">
