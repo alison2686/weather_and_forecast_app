@@ -46,6 +46,13 @@
     font-size: 18px;
 }
 
+.forecast-temp{
+    padding: 15px;
+    color: whitesmoke;
+    font-family: 'Recursive', sans-serif;
+    font-size: 16px;
+}
+
 .flex{
     display: flex;
     justify-content: space-between;
@@ -74,6 +81,7 @@
     margin: 10px;
     font-family: 'Recursive', sans-serif;
     font-size: 19px;
+    display: grid;
 }
 
 .flex-forecast{

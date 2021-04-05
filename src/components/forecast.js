@@ -20,7 +20,7 @@ const Forecast = ({forecastData}) => {
   const WeatherIcon = styled.div`
   color: whitesmoke;
 `; 
-  console.log(forecastData)
+  console.log(forecastData.dailyData)
 
   const results = forecastData.dailyData.map((item, index)=> {
 
@@ -45,12 +45,23 @@ const Forecast = ({forecastData}) => {
   return (
     <div key={index} className="forecast">
       <div className="flex-forecast">
-      <p className="day">{moment().format('dddd')}, <span>{moment().format('LL')}</span></p>
-    
-      <WeatherIcon style={{fontSize:25,marginTop:4}}>{weatherIcon}</WeatherIcon>
+        <div className="day">
+            <p className="day">{moment(item.dt_txt).format("dddd")}, <span>{moment(item.dt_txt).format('LL')}</span></p> 
+        </div>
+      
+      <div className="forecast-temp">
+         <p>{item.weather[0].description}</p>
+         <p>High: {Math.round(item.main.temp_max)}</p>
+         <p>Low: {Math.round(item.main.temp_min)}</p>
+      </div>
+      
+      <div>
+          <WeatherIcon style={{fontSize:25,marginTop:4}}>{weatherIcon}</WeatherIcon>
+      </div>
+      
 
       <p className="flex-forecast">
-        {item.main.temp} &deg;F
+         {Math.round(item.main.temp)} &deg;F
       </p>
       </div>
     </div>

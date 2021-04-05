@@ -1,7 +1,7 @@
 import './App.css';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 import Weather from './components/weather'
-import { Dimmer, Loader } from 'semantic-ui-react';
+import { Dimmer, Loader } from 'semantic-ui-react'
 import Forecast from './components/forecast'
 
 export default function App() {
