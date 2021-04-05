@@ -22,10 +22,19 @@ export default function App() {
       console.log("Latitude is:", lat)
       console.log("Longitude is:", long)
 
+      // function handleResponse(response) {
+      //   if (response.ok) {
+      //     return response.json();
+      //   } else {
+      //     throw new Error("Please Enable your Location in your browser!");
+      //   }
+      // }
+
       if (lat !== '' && long !== '') {
         let weatherAPI = fetch(`${process.env.REACT_APP_API_URL}/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
         let forecastAPI = fetch(`${process.env.REACT_APP_API_URL}/forecast?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
      await Promise.all([weatherAPI, forecastAPI])
+    //  .then(res => Promise.all(handleResponse(res)))
       .then(values => Promise.all(values.map(value => value.json())))
       .then(finalVals => {
         let weatherAPIResp = finalVals[0]
@@ -54,7 +63,7 @@ export default function App() {
         ): (
           <div>
             <Dimmer active>
-              <Loader>Loading..</Loader>
+              <Loader>Loading..Please enable your location in your browser.</Loader>
             </Dimmer>
           </div>
         )}
@@ -66,7 +75,7 @@ export default function App() {
         ): (
           <div>
             <Dimmer active>
-              <Loader>Loading..</Loader>
+              <Loader>Loading..Please enable your location in your browser.</Loader>
             </Dimmer>
           </div>
         )}
