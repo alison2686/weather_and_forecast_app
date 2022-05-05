@@ -84,14 +84,3 @@ const Weather = ({weatherData}) => {
 
 export default Weather;
 
-// function Weather({weatherData}) {
-//     return (
-//         <div className="main">
-//             <div className="top">
-//                 <p className="header">Hello!</p>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Weather

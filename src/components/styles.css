@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
 .main{
-    width: 700px;
+    width: 300px;
     border-radius: 20px;
     background-color: #01579b;
 }
@@ -74,6 +74,7 @@
 }
 
 .forecast{
+    width: 350px;
     border-radius: 20px;
     background-color: #01579b;
     color: whitesmoke;
@@ -97,3 +98,202 @@
     padding-top: 0%;
 }
 
+@media (min-width: 600px) and (max-width:900px) {
+    .main{
+        width: 700px;
+        border-radius: 20px;
+        background-color: #01579b;
+    }
+    
+    .top{
+        height: 60px;
+        background-color: #424242;
+        color: whitesmoke;
+        padding: 10px;
+        border-radius: 20px 20px 0 0;
+        font-family: 'Recursive', sans-serif;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header{
+        background-color: #424242;
+        color: whitesmoke;
+        margin: 10px 0px 0px 10px;
+        font-size: 25px;
+        border-radius: 20px 20px 0 0;
+        font-family: 'Recursive', sans-serif;
+    }
+    
+    .button{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .day{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .temp{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 18px;
+    }
+    
+    .forecast-temp{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 16px;
+    }
+    
+    .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .sunrise-sunset{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 16px;
+    }
+    
+    .description{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .forecast{
+        border-radius: 20px;
+        background-color: #01579b;
+        color: whitesmoke;
+        padding: 10px;
+        margin: 10px;
+        font-family: 'Recursive', sans-serif;
+        font-size: 19px;
+        display: grid;
+    }
+    
+    .flex-forecast{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .weather_icon{
+        display: flex;
+        float: left;
+        display: inline-flex;
+        width: auto;
+        padding-top: 0%;
+    }
+
+}
+
+@media(min-width:900px) {
+    .main{
+        width: 700px;
+        border-radius: 20px;
+        background-color: #01579b;
+    }
+    
+    .top{
+        height: 60px;
+        background-color: #424242;
+        color: whitesmoke;
+        padding: 10px;
+        border-radius: 20px 20px 0 0;
+        font-family: 'Recursive', sans-serif;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header{
+        background-color: #424242;
+        color: whitesmoke;
+        margin: 10px 0px 0px 10px;
+        font-size: 25px;
+        border-radius: 20px 20px 0 0;
+        font-family: 'Recursive', sans-serif;
+    }
+    
+    .button{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .day{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .temp{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 18px;
+    }
+    
+    .forecast-temp{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 16px;
+    }
+    
+    .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .sunrise-sunset{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 16px;
+    }
+    
+    .description{
+        padding: 15px;
+        color: whitesmoke;
+        font-family: 'Recursive', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .forecast{
+        border-radius: 20px;
+        background-color: #01579b;
+        color: whitesmoke;
+        padding: 10px;
+        margin: 10px;
+        font-family: 'Recursive', sans-serif;
+        font-size: 19px;
+        display: grid;
+    }
+    
+    .flex-forecast{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .weather_icon{
+        display: flex;
+        float: left;
+        display: inline-flex;
+        width: auto;
+        padding-top: 0%;
+    }
+
+}
