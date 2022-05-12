@@ -17,5 +17,5 @@ Please enable your location in the browser to use this app.
 ### Developers
 
 Alison Lee 
-https://www.linkedin.com/in/alison-lee-4547b114/
-https://github.com/alison2686
+linkedin.com/in/alison2686
+github.com/alison2686
