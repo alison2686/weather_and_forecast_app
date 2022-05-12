@@ -18,6 +18,6 @@ Please enable your location in the browser to use this app.
 
 Alison Lee  
 \
-linkedin.com/in/alison2686
+www.linkedin.com/in/alison2686
 \
-github.com/alison2686
+www.github.com/alison2686
