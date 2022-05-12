@@ -16,6 +16,8 @@ Please enable your location in the browser to use this app.
 
 ### Developers
 
-Alison Lee\ 
-linkedin.com/in/alison2686\
+Alison Lee  
+\
+linkedin.com/in/alison2686
+\
 github.com/alison2686
