@@ -2,54 +2,16 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 import './styles.css'
 import moment from 'moment'
-// import {
-//   faCloud,
-//   faBolt,
-//   faCloudRain,
-//   faCloudShowersHeavy,
-//   faSnowflake,
-//   faSun,
-//   faSmog,
-// } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import styled from 'styled-components';
-
-
 
 const Weather = ({weatherData}) => {
-
-//   const WeatherIcon = styled.div`
-//   color: whitesmoke;
-// `;
 
   const refresh = () => {
     window.location.reload();
   }
-
-  // let weatherIcon = null;
-
-  // if (weatherData.weather[0].main === 'Thunderstorm') {
-  //   weatherIcon = <FontAwesomeIcon icon={faBolt} />;
-  // } else if (weatherData.weather[0].main === 'Drizzle') {
-  //   weatherIcon = <FontAwesomeIcon icon={faCloudRain} />;
-  // } else if (weatherData.weather[0].main === 'Rain') {
-  //   weatherIcon = <FontAwesomeIcon icon={faCloudShowersHeavy} />;
-  // } else if (weatherData.weather[0].main === 'Snow') {
-  //   weatherIcon = <FontAwesomeIcon icon={faSnowflake} />;
-  // } else if (weatherData.weather[0].main === 'Clear') {
-  //   weatherIcon = <FontAwesomeIcon icon={faSun} />;
-  // } else if (weatherData.weather[0].main === 'Clouds') {
-  //   weatherIcon = <FontAwesomeIcon icon={faCloud} />;
-  // } else {
-  //   weatherIcon = <FontAwesomeIcon icon={faSmog} />;
-  // }
-
-
   return (
     <div className="main">
 
       <div className="top">
-      {/* <WeatherIcon style={{fontSize:30,marginTop:5}}>{weatherIcon}</WeatherIcon> */}
       <p className="header">{weatherData.name}</p>
       <Button className="button" inverted color='blue' circular icon='refresh' onClick={refresh} />
       </div>

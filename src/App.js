@@ -16,25 +16,12 @@ export default function App() {
       navigator.geolocation.getCurrentPosition(function(position) {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
-        // console.log(position)
       });
-
-      console.log("Latitude is:", lat)
-      console.log("Longitude is:", long)
-
-      // function handleResponse(response) {
-      //   if (response.ok) {
-      //     return response.json();
-      //   } else {
-      //     throw new Error("Please Enable your Location in your browser!");
-      //   }
-      // }
 
       if (lat !== '' && long !== '') {
         let weatherAPI = fetch(`${process.env.REACT_APP_API_URL}/weather?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
         let forecastAPI = fetch(`${process.env.REACT_APP_API_URL}/forecast?lat=${lat}&lon=${long}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
      await Promise.all([weatherAPI, forecastAPI])
-    //  .then(res => Promise.all(handleResponse(res)))
       .then(values => Promise.all(values.map(value => value.json())))
       .then(finalVals => {
         let weatherAPIResp = finalVals[0]
